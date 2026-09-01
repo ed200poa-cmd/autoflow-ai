@@ -18,7 +18,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="AutoFlow AI Demo", lifespan=lifespan)
+app = FastAPI(title="AutoFlow AI", lifespan=lifespan)
 
 
 class LeadRequest(BaseModel):
@@ -39,7 +39,7 @@ class N8nWebhookPayload(BaseModel):
 
 @app.get("/health")
 async def health_check():
-    return {"status": "ok", "service": "AutoFlow AI Demo"}
+    return {"status": "ok", "service": "AutoFlow AI"}
 
 
 @app.post("/analyze-lead")

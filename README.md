@@ -1,4 +1,4 @@
-# AutoFlow AI Demo
+# AutoFlow AI
 
 **n8n Workflow Automation + Claude AI Lead Scoring Pipeline**
 
@@ -8,13 +8,13 @@ Built by **Edward Kim** — AI Automation Developer
 
 ## Overview
 
-AutoFlow AI Demo is a complete lead qualification automation system that:
+AutoFlow AI is a complete lead qualification automation system that:
 
 1. Accepts lead submissions via a web form or n8n webhook
 2. Sends lead data to a FastAPI backend
 3. Uses **Claude AI (Haiku)** to score leads as **Hot / Warm / Cold**
 4. Returns a personalized email draft and follow-up date
-5. Simulates Slack notification, Google Sheets logging, and Gmail send
+5. Hands off to Slack, Google Sheets, and Gmail at a stubbed integration boundary
 
 ---
 
@@ -29,7 +29,7 @@ Lead Form / n8n Webhook
         ↓
   SQLite — Persist result
         ↓
-  Simulated: Slack / Google Sheets / Gmail
+  Stubbed delivery: Slack / Google Sheets / Gmail
 ```
 
 ---
@@ -74,7 +74,7 @@ Open [http://localhost:8000](http://localhost:8000)
 
 | Method | Path | Description |
 |--------|------|-------------|
-| `GET`  | `/` | Demo frontend |
+| `GET`  | `/` | Web form frontend |
 | `GET`  | `/health` | Health check |
 | `POST` | `/analyze-lead` | Analyze a lead with Claude AI |
 | `POST` | `/webhook/n8n` | n8n webhook receiver |
@@ -116,7 +116,7 @@ autoflow_demo/
 ├── claude_analyzer.py   # Claude AI lead scoring
 ├── database.py          # SQLite async operations
 ├── static/
-│   └── index.html       # Demo frontend (Tailwind CSS)
+│   └── index.html       # Web form frontend (Tailwind CSS)
 ├── n8n_workflow.json    # Importable n8n workflow
 ├── requirements.txt
 ├── Procfile             # For Heroku/Railway deployment
