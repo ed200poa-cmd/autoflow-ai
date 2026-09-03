@@ -4,7 +4,7 @@
 
 Built by **Edward Kim** — AI Automation Developer
 
-**Live demo: [https://autoflow-ai-production-6432.up.railway.app](https://autoflow-ai-production-6432.up.railway.app)**
+**Live: [https://autoflow-ai-production-6432.up.railway.app](https://autoflow-ai-production-6432.up.railway.app)**
 
 ---
 
